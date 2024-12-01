@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteForge-Evo | Plugins</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>LiteForge-Evo</h2>
+            <!-- Search input -->
+            <label>Search:
+                <input type="text" id="searchInput" placeholder="Search for plugins...">
+            </label>
+        </nav>
+    </header>
+
+    <main>
+        <h1>LiteForge-Evo Plugins</h1>
+        <p>Welcome to LiteForge-Evo, find the plugin you want to use to customize your own game engine!</p>
+
+        <div class="content" id="pluginContainer">
+            <div id="hacker-theme" class="plugin-box" onclick="downloadFile('Plugins/themes/hacker-theme.js', 'hacker-theme.js')">
+                <h5>Hacker Theme</h5>
+                <p>A sleek, dark theme with a hint of red, perfect for creating that cyberpunk or hacker atmosphere. It gives the game engine a gritty, tech-inspired look.</p>
+            </div>
+            <div id="neon-theme" class="plugin-box" onclick="downloadFile('Plugins/themes/neon-theme.js', 'neon-theme.js')">
+                <h5>Neon Theme</h5>
+                <p>Vibrant and electrifying, the Neon Theme brings bright neon lights and sharp contrasts to the engine's interface, ideal for a futuristic, cyber-inspired feel.</p>
+            </div>
+            <div id="dracula-theme" class="plugin-box" onclick="downloadFile('Plugins/themes/dracula-theme.js', 'dracula-theme.js')">
+                <h5>Dracula Theme</h5>
+                <p>A dark and moody theme with a rich, purple-based color palette, creating a visually immersive and mysterious atmosphere for your game engine.</p>
+            </div>
+            <div id="nature-theme" class="plugin-box" onclick="downloadFile('Plugins/themes/nature-theme.js', 'nature-theme.js')">
+                <h5>Nature Theme</h5>
+                <p>Inspired by the calm beauty of the outdoors, this theme features earthy tones and soft greens to create a serene, nature-filled environment within your game engine.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function downloadFile(fileUrl, fileName) {
+            
+            const a = document.createElement('a');
+            a.href = fileUrl; 
+            a.download = fileName; 
+            document.body.appendChild(a); 
+            a.click(); 
+            document.body.removeChild(a); 
+        }
+        </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

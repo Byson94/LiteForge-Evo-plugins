@@ -1,0 +1,106 @@
+/* Default light mode styles */
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for a softer look */
+    color: #333; /* Dark text for contrast */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color change */
+}
+
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff; /* White nav background */
+    color: #333; /* Dark text color */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* This ensures the content is spread across the full width */
+    align-items: center;
+    width: 100%; /* Ensure nav takes full width */
+    padding: 10px; /* Optional: adds padding to the nav */
+}
+
+nav h2 {
+    margin: 0; /* Removes default margin */
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    background-color: #ffffff; /* White background */
+    color: #333; /* Dark text */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 12px; /* Add some padding */
+    font-size: 16px; /* Font size */
+    margin-left: 10px; /* Spacing between elements */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+}
+
+input:focus {
+    border-color: #4a90e2; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Soft focus shadow */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    background-color: #e0e0e0;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s ease; 
+}
+
+button:hover {
+    background-color: #d4d4d4; 
+}
+
+main {
+    margin-left: 20px;
+}
+
+.content {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjusts column size */
+    gap: 20px; 
+}
+
+.plugin-box {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.1s linear;
+}
+
+.plugin-box h5 {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.plugin-box:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

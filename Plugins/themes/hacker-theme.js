@@ -1,9 +1,8 @@
-console.log("plugin-init");
-lfpl.theme(true);
+console.log("hacker theme loaded!");
+lfpl.ssload(true);
 
-const styleSheet = document.createElement('style');
-styleSheet.type = 'text/css';
-styleSheet.innerText = `
+// CSS code for styling the page
+const cssCode = `
   /* Backgrounds */
   body {
     background-color: #F4E1E1;
@@ -61,21 +60,21 @@ styleSheet.innerText = `
   }
 `;
 
-document.head.appendChild(styleSheet);
+lfpl.loadAsset(cssCode, "css");
 
+// Add additional logic for JavaScript functionality
 const newProjectButton = document.getElementById('new-project-button');
 if (newProjectButton !== null) {
-  newProjectButton.classList.add('new-project-button');  
+  newProjectButton.classList.add('new-project-button');
 }
-
 
 const links = document.getElementsByTagName('a');
 for (let link of links) {
   link.addEventListener('mouseover', () => {
-    link.style.color = '#FF6347';  
+    link.style.color = '#FF6347';
   });
   link.addEventListener('mouseout', () => {
-    link.style.color = '#B22222';  
+    link.style.color = '#B22222';
   });
 }
 
