@@ -1,83 +1,67 @@
-/* Default light mode styles */
+/* General body styling */
 body {
-    height: 100vh;
-    width: 100vw;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light grey background for a softer look */
-    color: #333; /* Dark text for contrast */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color change */
+    background-color: #f4f4f4; 
+    color: #333;
+    height: 100%; 
+    width: 100%; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    overflow-x: hidden;
 }
 
+/* Header */
 header {
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: #ffffff; /* White nav background */
-    color: #333; /* Dark text color */
+    background-color: #ffffff;
+    color: #333;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 nav {
+    width: 95%; 
     display: flex;
-    justify-content: space-between; /* This ensures the content is spread across the full width */
+    justify-content: space-between; 
     align-items: center;
-    width: 100%; /* Ensure nav takes full width */
-    padding: 10px; /* Optional: adds padding to the nav */
+    padding: 10px 15px;
 }
 
-nav h2 {
-    margin: 0; /* Removes default margin */
-}
-
-form {
-    display: flex;
-    align-items: center;
-}
-
+/* Input Styling */
 input {
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark text */
-    border: 1px solid #ccc; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 8px 12px; /* Add some padding */
-    font-size: 16px; /* Font size */
-    margin-left: 10px; /* Spacing between elements */
-    transition: border-color 0.2s ease, box-shadow 0.2s ease; /* Smooth transitions */
+    width: 100%; 
+    max-width: 300px;
+    background-color: #ffffff; 
+    color: #333;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1rem; 
+    margin-left: 0px; 
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus {
-    border-color: #4a90e2; /* Highlight border on focus */
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Soft focus shadow */
-    outline: none; /* Remove default outline */
+    border-color: #4a90e2; 
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    outline: none; 
 }
 
-button {
-    background-color: #e0e0e0;
-    color: #333;
-    border: 1px solid #ccc;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s ease; 
-}
-
-button:hover {
-    background-color: #d4d4d4; 
-}
-
-main {
+main h1, p {
     margin-left: 20px;
 }
 
+/* Plugin Box Styling */
 .content {
     margin-top: 20px;
+    padding: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjusts column size */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     gap: 20px; 
 }
 
@@ -85,22 +69,39 @@ main {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 15px;
     text-align: center;
-    transition: transform 0.1s linear;
-}
-
-.plugin-box h5 {
-    font-weight: 700;
-    text-decoration: underline;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .plugin-box:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .content {
+        grid-template-columns: 1fr; /* Stack all plugins */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .plugin-box {
+        padding: 10px;
+    }
 }
